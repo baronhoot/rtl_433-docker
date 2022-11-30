@@ -13,4 +13,4 @@ COPY build.sh .
 # Build rtl_433
 RUN ./build.sh
 
-ENTRYPOINT ["/usr/local/bin/rtl_433"]
+ENTRYPOINT ["/usr/local/bin/rtl_433", "-c", "/config/rtl_433.conf"]
