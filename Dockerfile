@@ -1,5 +1,5 @@
 FROM debian:latest
-MAINTAINER Christian Juncker Brædstrup <christian@junckerbraedstrup.dk>
+MAINTAINER baronhoot <baronhoot@gmail.com>
 
 WORKDIR /tmp/
 
@@ -13,4 +13,4 @@ COPY build.sh .
 # Build rtl_433
 RUN ./build.sh
 
-CMD rtl_433
+ENTRYPOINT ["/usr/local/bin/rtl_433"]
